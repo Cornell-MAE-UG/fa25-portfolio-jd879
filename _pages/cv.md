@@ -1,6 +1,6 @@
 ---
 layout: default
-title: <Your Name> - Curriculum Vitae
+title: Julia Deffner - Curriculum Vitae
 permalink: /cv/
 ---
 ## Curriculum Vitae
@@ -8,43 +8,35 @@ permalink: /cv/
 [Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +123 456 7890
+**Email:** [jd879@cornell.edu](mailto:jd879@cornell.edu) | | | **Phone:** +650 284 6662
 
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
+I am a curious and hard-working mechanical engineering student with a broad range of interests and experience, including aerospace structures & mechanisms, automotive design, and manufacturing. and eager to apply my knowledge in real-world applications.
 
 ---
 
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
-
-- **[High School Name]**  
-  *High School Diploma*  
-  Graduation: [Month, Year]
+  GPA: 4.02/4.0 | Graduation: May, 2026
 
 ---
 
 #### Skills
-- **Software:** Autodesk Fusion 360, SolidWorks, ANSYS  
+- **Software:** SOLIDWORKS, Siemens NX, Creo Parametric, Fusion 360  
 - **Programming:** Python, MATLAB  
-- **Tools:** 3D Printing, Laser Cutting  
+- **Tools:** Manual Milling & Lathing, MIG Welding, TIG Welding 
 
 ---
 
 #### Projects
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
+- **Ethical Analysis of the Boeing 737 MAX Crisis**:  
+  *As part of Cornell's Engineers in Society class, I synthesized in-class work and research into a coherent essay on the Boeing 737 MAX crisis.*   
 
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
+- **Design and Testing of a Small-Scale Horizontal-Axis Wind Turbine**:  
+  *As part of Cornell's Fluids and Heat Transfer Laboratory course, I worked in a group of 4 to design, model, optimize, and test a small-scale HAWT.*    
 
 ---
 
