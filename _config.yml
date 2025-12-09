@@ -13,7 +13,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Julia Deffner"
 description              : "Julia Deffner - Projects and CV"
-baseurl                  : ""  
+baseurl                  : "fa25-portfolio-jd879"  
 
 # Theme and Style
 theme: jekyll-theme-minimal
