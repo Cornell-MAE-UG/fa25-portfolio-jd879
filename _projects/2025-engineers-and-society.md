@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Ethical Analysis of Boeing 737 MAX Crisis
+permalink: /engineers-and-society/
+
 ---
 INTRODUCTION
 
