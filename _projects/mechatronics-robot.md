@@ -1,39 +1,28 @@
 ---
 layout: project
-title: Design and Testing of a Small-Scale Horizontal Axis Wind Turbine
-technologies: [MATLAB, Fusion 360, LabView]
+title: Cube Craze Robot
+technologies: [Fusion 360, Arduino]
 # image: /assets/images/wind_turbine.png
 ---
-PROJECT OVERVIEW
+Robot Design and Strategy Overview
 
-Our objective was to design a small-scale horizontal-axis wind turbine that extracts maximum power from oncoming wind, while conforming to several constraints related to geometry, material, and operating conditions. 
+Overall we wanted to keep our robot design and strategy as simple as possible to limit the amount of issues that might arise. Our robot consists of the given chassis, a surrounding box enclosure with slots for our 3 QTI sensors, and a flap in the front. The flap ensures that the boxes can enter our robot perimeter, but cannot escape when driving backward or if we are getting pushed. We have used the small breadboard with the Arduino for wiring our motors and a larger breadboard for wiring our sensors. We used 3 QTI sensors located at the front left, front right, and center back of our robot. Ideally during the competition our robot will start at an angle and head to the center right of the board then turn and move across the board in one initial pass to collect as many blocks as possible. Then our robot will continue to move forward and turn right or left depending on whether the left or right QTI sensor detects the black border. The robot will drive forward when the back QTI sensor detects the border. When both the front QTI sensors detect the border the robot will stop. 
 
-DESIGN PROCCESS
+Design Process Reflection
 
-To do this, we chose some design parameters based on literature research and basic hand calculations. Then, we wrote several MATLAB scripts to model the wind turbine using Blade-Element Momentum theory (BEM). The model splits up each blade into descretized segments, calculates wind conditions, forces, and stresses, and integrates along the blade to calculate freespin RPM, max stress, and maximum power output.
+Our brainstorm plan worked well and for our front flap we came up with many possible ways to create it to make sure it would only open one way so blocks couldn’t escape. When we received the hinges we ordered they were quite stiff, so we used a thin piece of cardboard instead. 
 
-![General Design Process]({{ "assets/images/design_flowchart.png" | relative_url }})
+For milestone 2 the original wheels given were not providing great traction causing the timing for our turns to be off. To fix this temporarily we added rubber bands to the wheels. Eventually for our final robot we used larger wheels from the lab to get better traction and it also created clearance for blocks to go under our chassis. 
 
-TESTING SUMMARY
+Milestone 3 gave us the most trouble due to both the color sensor and the QTI sensors sometimes incorrectly reading the board. It took us a while to get a good range of frequencies for the colors to make sure it did not mistake blue, yellow, and black with each other. We also had to switch our QTI sensors out multiple times because some of them were not working even with us putting it closer to the board. Since milestone 3 gave us the most trouble we decided not to use a color sensor on our final robot since there was no requirement on which side of the board we needed to end on. From this milestone we also changed the resistors from 10 kΩ to 20 kΩ, for each QTI sensor and adjusted the placement of the sensors themselves to be closer to the ground in hopes of the border sensing being as accurate as possible in different lighting settings. 
 
-Our testing began by assembling the turbine (attaching blades, mounting the hub, reinstalling the nose cone) and confirming LabView was correctly set up, with pressure transducer calibrated and with successful data collection verified. In total, five wind speeds were tested: 4.1 m/s, 4.8 m/s, 4.9 m/s, 5.3 m/s, and 5.8 m/s. For each wind speed, we collected the RPM, torque, and power at different torque brake voltages to create various power curves. We were especially careful not to exceed the max rated torque brake voltage or the max RPM the torque brake could take.
+As a result of the changes we made due to issues we had in milestone 2 and 3 we were able to complete milestone 4 pretty easily. While working on the code for the competition we originally wanted our robot to continue driving around however sometimes when both the front QTI sensors sensed black our robot would start turning or it would pause not turn and then keep driving forward. To play safe we decided to just change the code so the robot would stop to ensure that our robot would not fall off the board because this would add a possibility of blocks falling out of our enclosure. 
 
-<p style="text-align:center;">
-  <img src="{{ 'assets/images/final_design.png' | relative_url }}" 
-       alt="Final Blade Design" 
-       style="width:100%; height:auto;">
-</p>
+Competition Analysis
 
-The data follows expected trends; a higher wind speed results in more power extraction and higher RPMs. Between 2100-2400 RPM the data flattens out, likely due to the blade’s rotation rate leading to the blade experiencing its resonant frequency, slowing it down. This is found in all power curves that spin at this range, indicating it is experiencing resonance. Further comparing the model predictions to the experimental results, the model consistently overpredicted the max power extracted. This is likely due to the assumptions built into the model that ignore tip effect, which neglects additional drag and friction forces on the blades that slowed them down.
+Our first round went terribly, we did not check the voltage of the battery we were given because in the rules it said that a new 9V battery would be given to us and so our robot did not start at all because the battery was dead. We rapidly switched batteries with a bit of a higher voltage but it still was not quite 9V and so for the next 2 rounds our robot was unable to turn and would only move forward very not smoothly. When we finally switched back to the battery we had originally used when testing our robot ran as intended because the voltage was indeed 9V. After this switch our robot successfully moved across the center of the board to collect blocks and would continue to drive around. We were pleasantly surprised with how the robot responded when in contact with the other robot. We thought our robot would be the one getting pushed, but our robot was actually robust enough to keep moving and eventually push the other robot out of the way. One thing that was not ideal, but not the end of the world, was that our two front QTI sensors would sometimes both sense black when only one was on black and thus stopping our robot. It would have been nice to keep driving around and potentially collect more blocks, but it was able to keep the initial blocks collected during our starting sequence in our robot perimeter. Also, if both robots headed to the same area of the board to collect blocks sometimes we would get unluckily turned around and not collect many blocks. 
 
-<p style="text-align:center;">
-  <img src="{{ 'assets/images/power_curves.png' | relative_url }}" 
-       alt="Collected Power Curves" 
-       style="width:100%; height:auto;">
-</p>
+Conclusions
 
-Overall, our blade design was effective at extracting power in a wind tunnel, achieving a maximum measured output of 1.8W. This result demonstrates that our blade design methodology, which optimizes lift-to-drag ratio, taper, and twist, was effective at producing a functional turbine blade. However, the model inaccurately predicted optimal operating RPM and maximum power output. The model underpredicted operating RPM, selecting a design RPM of 1050 RPM compared to an experimentally determined optimum of 1770 RPM, and overpredicted maximum power, estimating 6.5 W versus the measured 1.8 W at a wind speed of 5.8 m/s. Future work should focus on improving model fidelity to better align predicted and experimental performance. Key improvements include more accurate calculation of axial and tangential induction factors, incorporation of losses from tip effects, and accounting for frictional losses and stress concentrations at the hub connection. 
+Overall, our robot performed very well once we found a working battery, and it operated how we intended it to. Our robot consistently collected about half the blocks, and did not drive off the board. As mentioned before, after our robot completes it first sweep, it continues driving around the board, adjusting when the border is detected to avoid driving off or getting pushed. When just the left QTI sensor is triggered the robot turns right, when just the right QTI is triggered the robot turns left, and when the back QTI is triggered the robot drives forward. When both front QTI sensors were triggered, we wanted to have the robot back up and turn around so it could continue driving around and collecting blocks. However we were having issues with getting this part of the code to work, so instead we had the robot just stop. If we redid this project, we would try to figure out how to make that part of the code work. We might try to use interrupts instead of while loops, and maybe even logic gates so there could be a separate arduino pin corresponding to the border being sensed in the front. Additionally, we would try to finalize our enclosure and flap design earlier so we would not waste money on hinges and laser cut parts that were not used (even though we did not have issues staying under budget). We would advise future students to check the voltage of their battery on competition day because we know several other teams were also given dead batteries.
 
-PERSONAL CONTRIBUTIONS
-
-I helped out a lot with MATLAB modelling, but with special focus on working with the provided Weibull distribution of wind velocities to obtain a target wind speed that would extract maximum average power. I also worked on integrating this probability distribution with our results to calculate a predicted average power over the entire distribution based on our four data points. I additionally helped out with all writeups and our final presentation and report.
